@@ -204,6 +204,14 @@ closeNav.addEventListener("click",()=>{
     closeNav.style.opacity = "0"
 })
 
+// PRE LOADER 
+const preloader = document. getElementById('preloader')
+
+setTimeout(()=>{
+    preloader.style.zIndex = "-1";
+    preloader.style.opacity = "0";
+},1000)
+
 // STATIC PAGE IMAGE CHANGER
 
 const images = [
