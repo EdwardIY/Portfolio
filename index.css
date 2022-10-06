@@ -456,9 +456,9 @@ header {
     align-items: center;
     justify-content: center;
     margin-top: 10em;
+    padding-bottom: 2em;
     gap: 100px;
-    position: relative;
-
+    outline: 1px solid green ;
 }
 
 .projectContainer {
@@ -467,7 +467,6 @@ header {
     align-items: center;
     justify-content: center;
     gap: 100px;
-    position: relative;
 }
 
 .project {
@@ -511,7 +510,6 @@ header {
 
 .projectText a {
     display: block;
-    /* width: 35%; */
     text-align: center;
     border: none;
     border-radius: 4em;
@@ -561,8 +559,7 @@ header {
 }
 
 .slider {
-    width: 100vw;
-    height: 26vw;
+    width: 100%;
 }
 
 .slider .projectText {
@@ -570,7 +567,7 @@ header {
 }
 .project #currentImg {
     width: 50%;
-    align-self: stretch;
+    height: 26vw;
     background-image: url(./MarketTemplate_Page.jpeg);
     background-position: center;
     background-size: cover;
@@ -581,17 +578,17 @@ header {
 
 @media(max-width:1245px) {
     .projectText p:nth-child(1){
-        font-size: 3vw;
+        font-size: 30px;
     }
     .projectText p:nth-child(2){
-        font-size: 2vw;
+        font-size:20px;
     }
     .projectText a{
-        font-size: 1.6vw;
+        font-size: 16px;
     }
 }
 
-@media(max-width:768px) {
+@media(max-width:900px) {
 
     .project{
         display: block;
