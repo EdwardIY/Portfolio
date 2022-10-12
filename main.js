@@ -11,6 +11,7 @@ document.querySelector('.perspective').style.display='none'
 document.querySelector('.perspectiveafterChosen').style.opacity='1'
 document.querySelector('.looking2Hire').classList.add('perspectiveChosenButton')
 document.querySelector('.needWebsite').classList.remove('perspectiveChosenButton') 
+document.querySelector('.needWebsite').style.opacity = ".3" 
 document.querySelector('.needWebsite').style.overflow="hidden" //Make sure to delete when INaW is ready
 }
 
