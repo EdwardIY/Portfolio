@@ -219,14 +219,15 @@ const images = [
 "./KhanAcademy_Page.jpeg",
 "./TecCrunch_Page.jpeg",
 "./Restaurant_Page.jpeg",
-"./MarketTemplate_Page.jpeg"]
+"./MarketTemplate_Page.jpeg",
+"./RealState.jpeg"]
 const currentImg = document.getElementById('currentImg');
 let i = 0;
 
 setInterval(()=>{
     currentImg.style.backgroundImage = `url(${images[i]})`
     i++;
-    if(i == 4) i = 0;
+    if(i == 5) i = 0;
 },5000)
 
 

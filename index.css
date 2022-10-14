@@ -662,18 +662,29 @@ header {
 .aboutMeContainer {
     display:flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0em 10em;
     gap: 50px;
     margin: auto;
     margin-bottom: 10vh;
 }
 
-.aboutMeContainer img {
+/* .aboutMeContainer img {
     width:350px;
     align-self: flex-start;
-    border-bottom: 5px solid white;
-    border-right: 5px solid black;
+    border: 2px solid white;
+    border-radius: 3%;
+    display: block;
+} */
+.aboutMeContainer .img {
+    width: 350px;
+    height: 350px;
+    background: url(./Pro_pic\ \(3\).png);
+    background-size: cover;
+    border-radius: 50%;
+    background-position: -5px -100px;
+    box-shadow: 3px 1px 23px 0px rgba(0,0,0,0.75);
+     align-self: flex-start;
 }
 
 .aboutMeContainer .des {
@@ -731,10 +742,12 @@ header {
     .aboutMeContainer {
         flex-direction: column;
     }
-    .aboutMeContainer img {
+    .aboutMeContainer .img {
         order: 1;
         width: 200px;
+        height: 200px;
         align-self: center;
+        background-position: -5px -55px;
     }
     .aboutMeContainer .des {
         width: 100%;
