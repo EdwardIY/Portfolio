@@ -181,7 +181,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 100px;
     opacity: 0;
     animation-name: perspective;
     animation-duration: 2s;
