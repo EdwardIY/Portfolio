@@ -130,7 +130,7 @@ header {
 
 /*  */
 .landingImg {
-    background: url(./blackBg.jpg) center center;
+    background: url(./IMAGES/blackBg.jpg) center center;
     background-color: rgba(0, 0, 0, 0.459);
     background-blend-mode: overlay;
     box-shadow: -1px -9px 13px 2px rgba(18,18,18,1) inset;
@@ -579,7 +579,7 @@ header {
 .project #currentImg {
     width: 50%;
     height: 26vw;
-    background-image: url(./MarketTemplate_Page.jpeg);
+    background-image: url(./IMAGES/MarketTemplate_Page.jpeg);
     background-position: center;
     background-size: cover;
     box-shadow: 0px 1px 20px 7px black;
@@ -861,7 +861,7 @@ form button:active {
 }
 
 #preloader {
-    background: rgb(0, 0, 0) url(./loader.gif) no-repeat center center;
+    background: rgb(0, 0, 0) url(./IMAGES/loader.gif) no-repeat center center;
     height: 100vh;
     width: 100vw;
     position: fixed;
