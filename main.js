@@ -1,6 +1,6 @@
 function looking2HireBtn() {
   localStorage.setItem('perspective', 'chosen');
-  document.querySelector('body').style.overflowY = 'initial';
+  document.querySelector('html').style.overflowY = 'initial';
   document.querySelector('header').style.left = '0px';
   // document.querySelector('.serviceNav').style.display="none"
   document.querySelector('.hireNav').style.display = 'flex';
