@@ -85,7 +85,7 @@ setTimeout(() => {
 
 const images = [
   './IMAGES/KhanAcademy_Page.jpeg',
-  './IMAGES/TecCrunch_Page.jpeg',
+  './IMAGES/College site.jpeg',
   './IMAGES/Restaurant_Page.jpeg',
   './IMAGES/MarketTemplate_Page.jpeg',
   './IMAGES/RealState.jpeg'];
