@@ -48,10 +48,11 @@ openNav.addEventListener('click', () => {
   openNav.style.opacity = '0';
   closeNav.style.zIndex = '3';
   closeNav.style.opacity = '1';
+  console.log('ran');
 });
 
 closeNav.addEventListener('click', () => {
-  nav.style.left = '-320px';
+  nav.style.left = '-322px';
   openNav.style.zIndex = '3';
   openNav.style.opacity = '1';
   closeNav.style.zIndex = '-1';
@@ -83,17 +84,17 @@ setTimeout(() => {
 }, 1000);
 // STATIC PAGE IMAGE CHANGER
 
-const images = [
-  './IMAGES/KhanAcademy_Page.jpeg',
-  './IMAGES/College_site.jpeg',
-  './IMAGES/Restaurant_Page.jpeg',
-  './IMAGES/MarketTemplate_Page.jpeg',
-  './IMAGES/RealState.jpeg'];
-const currentImg = document.getElementById('currentImg');
-let i = 0;
+// const images = [
+//   './IMAGES/KhanAcademy_Page.jpeg',
+//   './IMAGES/College_site.jpeg',
+//   './IMAGES/Restaurant_Page.jpeg',
+//   './IMAGES/MarketTemplate_Page.jpeg',
+//   './IMAGES/RealState.jpeg'];
+// const currentImg = document.getElementById('currentImg');
+// let i = 0;
 
-setInterval(() => {
-  currentImg.style.backgroundImage = `url(${images[i]})`;
-  i += 1;
-  if (i === 5) i = 0;
-}, 5000);
+// setInterval(() => {
+//   currentImg.style.backgroundImage = `url(${images[i]})`;
+//   i += 1;
+//   if (i === 5) i = 0;
+// }, 5000);

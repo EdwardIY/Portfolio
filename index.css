@@ -52,10 +52,11 @@ p {
 
  h2 {
     margin-top: 0;
-    font-size:70px;
+    font-size:60px;
     font-weight: 400;
     font-style: italic;
     text-align: center;
+    text-align: start;
     line-height: 70px;
     opacity: 0;
     filter: brightness(15px);
@@ -338,7 +339,7 @@ header {
     header {
         background-color: transparent;
         box-shadow: none;
-        display: none;
+        /* display: none; */
     }
     .hireNav {
         justify-content: flex-start;
@@ -346,7 +347,7 @@ header {
         background-color: rgba(0, 0, 0, 0.808);
         box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.73);
         top:0px;
-        left:-320px;
+        left:-322px;
         height: 105vh;
         width: 320px;
         padding: 2em 0em;
@@ -388,9 +389,9 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 10em;
+    margin-top: 5em;
     padding-bottom: 2em;
-    gap: 100px;
+    gap: 0px;
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -562,10 +563,6 @@ header {
         width: 50%;
         padding: .4em .5em;
     }
-    .projects h2 {
-        font-size: 60px;
-    }
-
     .slider {
         height: initial;
     }
@@ -590,6 +587,136 @@ header {
 }
 
 
+    .StaticPagesConatiner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:3em;
+    }
+
+    .StaticPagesConatiner__TitleContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 5em;
+
+        opacity: 0;
+        filter: brightness(15px);
+        transform: translateY(20vh);
+        transition: transform 2s, opacity 2.5s;
+    }
+
+    .StaticPagesConatiner__TitleContainer__Title {
+        font-size:31px;
+        font-weight: bold;
+        font-style: italic;
+        text-align: center;
+        width: 90%;
+    }
+
+    .StaticPagesConatiner__TitleContainer__Des {
+        font-size:20px;
+        width: 80%;
+    }
+
+    .StaticPagesConatiner__TitleContainer__Link {
+        border-radius: 4em;
+        padding:  .5em 1em;
+        font-size: 20px;
+        background: black;
+        color: white;
+        cursor: pointer;
+        transition: .3s;
+
+    }
+
+    .StaticPagesConatiner__TitleContainer__Link:hover {
+        transform: scale(1.01);
+        box-shadow: 0px 1px 20px 1px white;
+    }
+
+    .StaticPagesConatiner__StaticPages {
+        padding: 0em 4em;
+        display: flex;
+        align-items: center;
+        justify-content:space-evenly;
+        gap:50px;
+        flex-wrap: wrap;
+        /* width: 80vw; */
+        margin: auto;
+
+        opacity: 0;
+        filter: brightness(15px);
+        transform: translateY(20vh);
+        transition: transform 2s, opacity 2.5s;
+    }
+    
+    .StaticPages__Project {
+        text-align: center;
+        width: 300px;
+    }
+
+    
+    .StaticPages__Project__Link:hover  .StaticPages__Project_Img{
+        box-shadow: 0px 1px 20px 7px black; 
+        transform: scale(1.02); 
+        filter: brightness(100%);
+   }
+    
+    .StaticPages__Project__Link:hover  .StaticPages__Project__Des {
+        opacity: 1;
+   }
+
+    .StaticPages__Project_Img {
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+        object-position: top;
+        filter: brightness(30%);
+        transition: .5s;
+        cursor:pointer;
+    }
+
+
+    .StaticPages__Project__Des {
+       font-weight: bold;
+       font-style: italic;
+       opacity: 0;
+       transition: .5s;
+    }
+    @media(max-width:1128px){
+        .StaticPagesConatiner__StaticPages {
+            gap:0px;
+            padding: 0em 2em;
+        }
+        .StaticPages__Project {
+            width: 40%;
+            min-width: 280px;
+        }
+    }
+    @media(max-width:700px){
+        .StaticPagesConatiner__StaticPages {
+            justify-content: center;
+            gap:5em
+        }
+        .StaticPages__Project {
+            width: 90vw;
+            min-width: 280px;
+        }
+
+       .StaticPages__Project_Img{
+            box-shadow: 0px 1px 20px 7px black; 
+            transform: scale(1.02); 
+            filter: brightness(100%);
+       }
+        
+        .StaticPages__Project__Des {
+            opacity: 1;
+            font-size: 20px;
+       }
+    }
 /*  */
 .aboutMe {
     display: flex;
