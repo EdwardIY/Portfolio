@@ -328,10 +328,10 @@ header {
 }
 
 @media(max-width:580px){
-    .open,
+    /* .open,
     .close {
         display: block;
-    }
+    } */
 .open {
     z-index: 3;
     opacity: 1;

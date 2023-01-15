@@ -1,19 +1,3 @@
-function looking2HireBtn() {
-  localStorage.setItem('perspective', 'chosen');
-  document.querySelector('html').style.overflowY = 'initial';
-  document.querySelector('header').style.left = '0px';
-  // document.querySelector('.serviceNav').style.display="none"
-  document.querySelector('.hireNav').style.display = 'flex';
-  document.querySelector('.perspective').style.display = 'none';
-  document.querySelector('.perspectiveafterChosen').style.opacity = '1';
-  document.querySelector('.looking2Hire').classList.add('perspectiveChosenButton');
-  document.querySelector('.needWebsite').classList.remove('perspectiveChosenButton');
-  document.querySelector('.needWebsite').style.opacity = '.3';
-  document.querySelector('.needWebsite').style.overflow = 'hidden'; // Make sure to delete when INaW is ready
-}
-
-if (localStorage.getItem('perspective') === 'chosen') looking2HireBtn();
-
 // function overflowfreezefix(){
 // document.querySelector('html').style.overflowY="initial"
 // document.querySelector('header').style.left="0px"
@@ -38,9 +22,20 @@ if (localStorage.getItem('perspective') === 'chosen') looking2HireBtn();
 // document.querySelector('.looking2Hire').classList.remove('perspectiveChosenButton')
 // }
 
+// MOBILE
 const openNav = document.getElementById('open');
 const closeNav = document.getElementById('close');
 const nav = document.getElementById('nav');
+
+function openToggle() {
+  if (window.screen.width <= 580 && localStorage.getItem('perspective') === 'chosen') {
+    openNav.style.display = 'block';
+    closeNav.style.display = 'block';
+  } else {
+    openNav.style.display = 'none';
+    closeNav.style.display = 'none';
+  }
+}
 
 openNav.addEventListener('click', () => {
   nav.style.left = '0px';
@@ -48,7 +43,6 @@ openNav.addEventListener('click', () => {
   openNav.style.opacity = '0';
   closeNav.style.zIndex = '3';
   closeNav.style.opacity = '1';
-  console.log('ran');
 });
 
 closeNav.addEventListener('click', () => {
@@ -58,6 +52,10 @@ closeNav.addEventListener('click', () => {
   closeNav.style.zIndex = '-1';
   closeNav.style.opacity = '0';
 });
+
+window.addEventListener('resize', (() => {
+  openToggle();
+}));
 
 const img = document.querySelectorAll('.hiddenLeft');
 const text = document.querySelectorAll('.hiddenRight');
@@ -98,3 +96,20 @@ setTimeout(() => {
 //   i += 1;
 //   if (i === 5) i = 0;
 // }, 5000);
+
+function looking2HireBtn() {
+  localStorage.setItem('perspective', 'chosen');
+  openToggle();
+  document.querySelector('html').style.overflowY = 'initial';
+  document.querySelector('header').style.left = '0px';
+  // document.querySelector('.serviceNav').style.display="none";
+  document.querySelector('.hireNav').style.display = 'flex';
+  document.querySelector('.perspective').style.display = 'none';
+  document.querySelector('.perspectiveafterChosen').style.opacity = '1';
+  document.querySelector('.looking2Hire').classList.add('perspectiveChosenButton');
+  document.querySelector('.needWebsite').classList.remove('perspectiveChosenButton');
+  document.querySelector('.needWebsite').style.opacity = '.3';
+  document.querySelector('.needWebsite').style.overflow = 'hidden'; // Make sure to delete when INaW is ready
+}
+
+if (localStorage.getItem('perspective') === 'chosen')looking2HireBtn();
