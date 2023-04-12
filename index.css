@@ -299,11 +299,13 @@ header {
     .hireNav{
       flex-direction: column;
       align-items: center;
-        gap: 40px;
+      gap: 20px;
     }
-
+    button {
+        font-size: 12px !important;
+    }
     .hireNav ul li{
-        font-size: 25px;
+        font-size: 18px;
         font-style: oblique;
         font-style: italic;
     }
@@ -328,10 +330,6 @@ header {
 }
 
 @media(max-width:580px){
-    /* .open,
-    .close {
-        display: block;
-    } */
 .open {
     z-index: 3;
     opacity: 1;
@@ -351,6 +349,14 @@ header {
         height: 105vh;
         width: 320px;
         padding: 2em 0em;
+    }
+    button {
+        font-size: 18px !important;
+    }
+    .hireNav ul li{
+        font-size: 18px;
+        font-style: oblique;
+        font-style: italic;
     }
     .hireNav ul {
         flex-direction: column;
@@ -465,26 +471,26 @@ header {
 }
 
 .project a+a:hover {
-    transform: scale(1.05);
+    transform: scale(1);
     box-shadow: 0px 1px 20px 1px white;
 }
 
 .projectText1 p + a:hover,
 .projectText1 p + a:active {
-    transform: scale(1.05);
+    transform: scale(1);
     box-shadow: 0px 1px 20px 1px rgb(220, 106, 255)
 }
 
 .projectText2 a:active,
 .projectText2 a:hover {
-    transform: scale(1.05);
+    transform: scale(1);
     box-shadow: 0px 1px 20px 10px  rgba(0, 0, 0, 0.525);
 
 }
 
 .projectText3 a:active,
 .projectText3 a:hover {
-    transform: scale(1.05);
+    transform: scale(1);
     box-shadow: 0px 1px 20px 7px #58798D;
 
 }
@@ -633,7 +639,7 @@ header {
     }
 
     .StaticPagesConatiner__TitleContainer__Link:hover {
-        transform: scale(1.01);
+        transform: scale(1);
         box-shadow: 0px 1px 20px 1px white;
     }
 
@@ -718,45 +724,30 @@ header {
        }
     }
 /*  */
-.aboutMe {
+.ContactContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 10em;
+    margin-top: 5em;
     position: relative;
 }
 
-.aboutMeContainer {
+.Contact {
     display:flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0em 10em;
-    gap: 50px;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0em 5em;
+    gap: 3em;
     margin: auto;
     margin-bottom: 10vh;
 }
+.Contact .aboutMeContainer {
+    flex:1;
+}
 
-/* .aboutMeContainer img {
-    width:350px;
-    align-self: flex-start;
-    border: 2px solid white;
-    border-radius: 3%;
-    display: block;
-} */
-/* .aboutMeContainer .img {
-    width: 350px;
-    height: 350px;
-    background: url(./Pro_pic\ \(3\).png);
-    background-size: cover;
-    border-radius: 50%;
-    background-position: -5px -100px;
-    box-shadow: 3px 1px 23px 0px rgba(0,0,0,0.75);
-     align-self: flex-start;
-} */
-
-.aboutMeContainer .des {
-    width:50%;
+.Contact .des {
+    width:100%;
     display: flex;
     flex-direction: column;
     opacity: 0;
@@ -784,81 +775,88 @@ header {
     font-size: 16px;
 }
 
-.contactBtn {
-    background-color: black;
-    display: inline-block;
-    color:white;
-    padding:.5em 1em;
-    border-radius: 5px;
-    cursor: pointer;
-    align-self: flex-start;
-    font-size: 18px;
-    transition: all .2s;
-    font-weight: bold;
-}
 
-.contactBtn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 8px 15px -5px rgba(0,0,0,0.58)
-    ;
-}
-
-@media(max-width:1150px) {
-    .aboutMeContainer {
-        padding: 0em 5em;
-    }
-    
-}
-
-@media(max-width:900px) {
-    .aboutMeContainer {
-        flex-direction: column;
-    }
-    .aboutMeContainer .img {
-        order: 1;
-        width: 200px;
-        height: 200px;
-        align-self: center;
-        background-position: -5px -55px;
-    }
-    .aboutMeContainer .des {
-        width: 100%;
-        order: 2;
-    }
-}
-
-@media(max-width:500px) {
-    .aboutMeContainer {
-        max-width: 99vw;
-        margin: auto;
-        align-items: center;
-        padding: 0em 0em;
-    }
-    .aboutMeContainer .des div + p {
-        padding: 0em 3em;
-    }
-    .aboutMeContainer .des .skillList {
-        padding: 0em 3em;
-    }
-}
-
-.contact {
-    margin: auto;
+form {
+    padding: 1em 3em;
+    width: 500px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 5em 0em; 
-    width: 90vw;
+    gap:15px;
+    border:1px solid;
 }
 
-.contact h3 { 
-    width: 90vw;
+form h3 {
+    font-size: 30px;
+    font-weight: 500;
+    width: 200px;
+    text-decoration: underline;
 }
 
-.contact h3:nth-last-of-type(1) span {
-    font-size: 18px;
-    margin-left: -5px;
+form input,
+textarea {
+    all: initial;
+    border-radius: 3px;
+    width: 100%;
+    padding: .5em 0em;
+    padding-left: .3em;
+    color:white;
+    font-family: inherit;
+    border: 1px solid;
 }
+::placeholder {
+    font-family: poppins,Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color:white;
+    opacity: .5;
+}
+
+form button {
+    all: initial;
+    color:white;
+    font-family: poppins,Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    border: 1px solid;
+    width: 100px;
+    text-align: center;
+    padding: .4em 0em;
+    opacity: .5;
+    transition: .2s;
+}
+
+form button:hover {
+    opacity: 1;
+}
+
+form button:active {
+    opacity: .5;
+}
+@media(max-width:1300px){
+    .ContactContainer {
+        margin-top: 2em;
+    }
+    .Contact {
+        flex-direction: column;
+        align-items: center;
+        gap:5em;
+        width: 70vw;
+    }
+
+    form {
+        width: 60vw;
+
+    }
+}
+@media(max-width:600px){
+   .Contact {
+     padding: .5em;
+     width: 95vw;
+   }
+   form {
+    width: 80vw;
+    padding: .5em 1em;
+   }
+}
+
 
 
 

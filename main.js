@@ -97,6 +97,7 @@ setTimeout(() => {
 //   if (i === 5) i = 0;
 // }, 5000);
 
+// Perspective
 function looking2HireBtn() {
   localStorage.setItem('perspective', 'chosen');
   openToggle();
@@ -111,5 +112,51 @@ function looking2HireBtn() {
   document.querySelector('.needWebsite').style.opacity = '.3';
   document.querySelector('.needWebsite').style.overflow = 'hidden'; // Make sure to delete when INaW is ready
 }
+if (localStorage.getItem('perspective') === 'chosen') looking2HireBtn();
 
-if (localStorage.getItem('perspective') === 'chosen')looking2HireBtn();
+// Button Sounds effect
+const effects = [
+  new Audio('./sound.mp3'),
+  new Audio('./sound.mp3'),
+  new Audio('./sound.mp3'),
+  new Audio('./sound.mp3'),
+  new Audio('./sound.mp3'),
+  new Audio('./sound.mp3'),
+  new Audio('./sound.mp3'),
+  new Audio('./sound.mp3'),
+  new Audio('./sound.mp3'),
+];
+
+const buttons = document.querySelectorAll('.link');
+
+buttons.forEach((btn, i) => {
+  btn.addEventListener('mouseover', () => {
+    effects[i].volume = 0.1;
+    effects[i].play();
+  });
+});
+
+// Email
+
+function sendMail(e) {
+  e.preventDefault();
+  const params = {
+    type: document.getElementById('type').value,
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    message: document.getElementById('message').value,
+  };
+  const serviceID = 'service_xuespnc';
+  const templateID = 'template_02wex08';
+
+  emailjs.send(serviceID, templateID, params).then((res) => {
+    document.getElementById('type').value = '';
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('message').value = '';
+    console.log(res);
+  // closeForm()
+  }).catch((err) => console.log(err));
+}
+
+document.getElementById('submitButton').addEventListener('click', (e) => sendMail(e));
