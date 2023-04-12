@@ -783,6 +783,10 @@ form {
     flex-direction: column;
     gap:15px;
     border:1px solid;
+    transform: translateY(-20vh);
+    opacity: 0;
+    filter:blur(10px);
+    transition: transform 2s, opacity 2.5s;
 }
 
 form h3 {

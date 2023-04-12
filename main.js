@@ -138,6 +138,14 @@ buttons.forEach((btn, i) => {
 
 // Email
 
+function closeForm() {
+  document.getElementById('Contact').innerHTML = `
+  <h3>Thanks!</h3>
+  <p>Your form has been submitted and will get a response within the next 12 hours.</p>`;
+  setTimeout(() => {
+    document.getElementById('Contact').style.display = 'none';
+  }, 5000);
+}
 function sendMail(e) {
   e.preventDefault();
   const params = {
@@ -155,7 +163,7 @@ function sendMail(e) {
     document.getElementById('email').value = '';
     document.getElementById('message').value = '';
     console.log(res);
-  // closeForm()
+    closeForm();
   }).catch((err) => console.log(err));
 }
 
