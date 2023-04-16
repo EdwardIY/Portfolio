@@ -762,6 +762,15 @@ header {
     border-radius: 5px;
 }
 
+.resume {
+    text-decoration: underline;
+    opacity: .5;
+}
+
+.resume:hover{
+    opacity:1;
+}
+
 .skillList {
     display: flex;
     justify-content: start;
