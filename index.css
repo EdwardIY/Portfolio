@@ -333,6 +333,7 @@ header {
 .open {
     z-index: 3;
     opacity: 1;
+    display: block;
 }
     header {
         background-color: transparent;
