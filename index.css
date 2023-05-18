@@ -492,9 +492,16 @@ header {
 .projectText3 a:active,
 .projectText3 a:hover {
     transform: scale(1);
-    box-shadow: 0px 1px 20px 7px #58798D;
-
+    box-shadow: 0px 1px 20px 7px #816b16;
 }
+
+.projectText4 a:active,
+.projectText4 a:hover {
+    transform: scale(1);
+    box-shadow: 0px 1px 20px 7px #58798D;
+}
+
+
 
 .project img{
     width: 50%;

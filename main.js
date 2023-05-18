@@ -167,4 +167,7 @@ function sendMail(e) {
   }).catch((err) => console.log(err));
 }
 
-document.getElementById('submitButton').addEventListener('click', (e) => sendMail(e));
+document.getElementById('Contact').addEventListener('submit', (e) => {
+  e.preventDefault();
+  sendMail(e);
+});
