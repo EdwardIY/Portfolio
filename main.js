@@ -36,6 +36,7 @@ function openToggle() {
     closeNav.style.display = 'none';
   }
 }
+openToggle();
 
 openNav.addEventListener('click', () => {
   nav.style.left = '0px';
