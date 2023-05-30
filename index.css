@@ -1,32 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins&family=Shadows+Into+Light&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-html {
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+* {
+    box-sizing: border-box;
     scroll-behavior: smooth;
-    overflow-y:hidden ;
-}
-
-.open,
-.close {
-    position: fixed;
-    top:5%;
-    left:5%;
-    font-size: 30px;
-    color: white;
-    z-index: -1;
-    opacity: 0;
-    display: none;
 }
 
 body {
     padding: 0px;
     margin: 0px;
-    box-sizing: border-box;
     line-height: 1.6em;
-    font-family: poppins, Arial, Helvetica, sans-serif;
+    font-family: 'Lato', sans-serif;
     scroll-behavior: smooth;
     background-color: #121212;
     color: white;
-box-shadow: 0px 0px 47px 5px rgba(0,0,0,1) inset;
+    box-shadow: 0px 0px 47px 5px rgba(0,0,0,1) inset;
 }
 
 img {max-width: 100%;}
@@ -54,7 +40,7 @@ p {
  h2 {
     margin-top: 0;
     font-size:60px;
-    font-weight: 400;
+    font-weight: 300;
     font-style: italic;
     text-align: center;
     text-align: start;
@@ -71,63 +57,7 @@ p {
 
 
 /*  */
-header {
-    background-color: rgba(0, 0, 0, 0.916);
-    box-shadow: 0px 7px 13px 0px rgba(0, 0, 0, 0.73);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1em 0em;
-    position: fixed;
-    left: -2000px;
-    width: 100%;
-    transition-property: left;
-    transition-duration: 1s;
-    animation-name: header;
-    animation-duration: 1s;
-    z-index: 1;
-    overflow-x: hidden;
-}
 
-.hireNav {
-    transition: .3s;
-    padding: 0em 2em;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.hireNav ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 35px;
-    font-size: 20px;
-    text-align: center;
-}
-
-.hireNav ul li {
-    color: white;
-    cursor: pointer;
-}
-
-.hireNav ul li:after {
-    content: '';
-    height: 2px;
-    width: 0%;
-    display: block;
-    margin: auto;
-    margin-top: 5px;
-    background-color: ghostwhite;
-    border-radius: 50px;
-    transition-property: width;
-    transition-duration: .3s;
-}
-
-.hireNav ul li:hover::after {
-    width: 100%;
-}
 
 
 /*  */
@@ -142,251 +72,79 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: -1;
-    user-select: none;
+    position: relative;
+}
+.landingImgText {
+    margin-top: -8em;
 }
 
 .landingImg h1 {
     font-size: 120px;
     letter-spacing: 4px;
     text-align: center;
-    margin-top: 120px;
+    font-weight: 500;
+    opacity: 0;
+    animation-name: view;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
 }
 
 .landingImg p {
     background-color: rgba(255, 255, 255, 0.728);
     color: black;
-    border: 1px solid;
     padding: .2em 0em;
-    margin-bottom: 90px;
-    opacity: 0;
     font-size: 25px;
-    font-weight: bold;
-    font-style: italic;
     text-align: center;
-    animation-name: titlep;
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-    animation-delay: .5s;
-}
-
-@keyframes titlep {
-    0% {
-        opacity: 0
-    }
-
-    100% {
-        opacity: 1
-    }
-}
-
-
-/* */
-.perspective {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 100px;
+    border-radius: 25px;
+    font-weight: 500;
     opacity: 0;
-    animation-name: perspective;
+    animation-name: view;
     animation-duration: 2s;
-    animation-timing-function: ease-out;
-    animation-delay: 1s;
     animation-fill-mode: forwards;
-    z-index: 10;
+    animation-delay: 2s;
+
 }
 
-@keyframes perspective {
-    0% {
-        opacity: 0
-    }
-
-    100% {
-        opacity: 1
-    }
-}
-
-.perspectiveafterChosen {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    z-index: 10;
-    opacity: .3;
-}
-
-.needWebsite,
-.looking2Hire {
-    border: none;
-    padding: .8em .7em;
-    font-size: 20px;
-    font-style: italic;
-    text-transform: capitalize;
-    width: 200px;
-    background: rgba(0, 0, 0, 0.706);
-    color: white;
+.landingImg i {
+    position: absolute;
+    bottom: 1em;
+    font-size: 40px;
     cursor: pointer;
-    position: relative;
-    /* overflow: hidden; */
-    z-index: 10;
-    transition-property: color, transform;
-    transition-duration: .3s;
+    animation-name: arrow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
-.looking2Hire {
-    overflow: hidden;
+@keyframes arrow {
+    0% {transform: translateY(0px); opacity: 0;}
+    50%  {transform: translateY(-20px);opacity: 1;}
+    100% {transform: translateY(0px); opacity: 0;}
+    
 }
-
-.looking2Hire:hover {
-    color: black;
+@keyframes view {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
-
-.looking2Hire::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: -70px;
-    left: 0px;
-    background-color: white;
-    z-index: -1;
-    transition-property: top;
-    transition-duration: .2s;
-}
-/* 
-.needWebsite::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    bottom: -70px;
-    left: 0px;
-    background-color: white;
-    z-index: -1;
-    transition-property: bottom;
-    transition-duration: .2s;
-} */
-
-.needWebsite::after {
-    content: 'COMING SOON';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    bottom: -70px;
-    left: 0px;
-    color: white;
-    z-index: 1;
-    transition-property: bottom;
-    transition-duration: .2s;
-}
-
-.looking2Hire:hover::before {
-    top: 0px;
-}
-
-.needWebsite:hover::before {
-    bottom: 0px;
-}
-
-.perspectiveChosenButton {
-    color: black;
-    background-color: white;
-    transform: scale(1.1);
-    box-shadow: 1px 2px 16px 5px rgba(0, 0, 0, 0.72);
-}
-
-@media(max-width:945px) {
-    .hireNav{
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-    button {
-        font-size: 12px !important;
-    }
-    .hireNav ul li{
-        font-size: 18px;
-        font-style: oblique;
-        font-style: italic;
-    }
-    .hireNav ul li::after {
-        margin-top: 10px;
-    }
-    .perspectiveafterChosen {
-        align-self: start;
-        margin-left: 20px;
-    }
-}
-
-@media(max-width:630px) {
+@media(max-width:645px){
     .landingImg h1 {
-        font-size: calc(15px + 15vw);
-        letter-spacing: 0;
+        font-size: 80px;
     }
+    
     .landingImg p {
-        padding: .2em;
-        font-size: 18px;
+        font-size: 20px;
     }
 }
-
-@media(max-width:580px){
-.open {
-    z-index: 3;
-    opacity: 1;
-    display: block;
-}
-    header {
-        background-color: transparent;
-        box-shadow: none;
-        /* display: none; */
+@media(max-width:400px){
+    .landingImg h1 {
+        font-size: 60px;
     }
-    .hireNav {
-        justify-content: flex-start;
-        position: fixed;
-        background-color: rgba(0, 0, 0, 0.808);
-        box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.73);
-        top:0px;
-        left:-322px;
-        height: 105vh;
-        width: 320px;
-        padding: 2em 0em;
-    }
-    button {
-        font-size: 18px !important;
-    }
-    .hireNav ul li{
-        font-size: 18px;
-        font-style: oblique;
-        font-style: italic;
-    }
-    .hireNav ul {
-        flex-direction: column;
-    }
-    .hireNav .perspectiveafterChosen {
-        flex-direction: column;
-        align-items: center;
-        align-self: center;
-        order: 2;
-
-    }
-    .hireNav .perspectiveafterChosen .needWebsite {
-       order: 1;
-    }
-
-}
-@media(max-width:534px){
-    .perspective {
-        flex-direction: column-reverse;
-        gap: 20px;
-    }
-
-    .perspective button {
-        font-size: 16px;
-        width: 200px;
+    
+    .landingImg p {
+        font-size: initial;
     }
 }
-
 
 
 
@@ -436,10 +194,11 @@ header {
 .projectText p:nth-child(1) {
     text-align: center;
     font-size: 30px;
-    font-weight: bold;
+    font-weight: 300;
     font-style: italic;
     width: 80%;
     margin: 0;
+    text-decoration: underline;
 }
 
 .projectText p:nth-child(2) {
@@ -665,7 +424,6 @@ header {
         justify-content:space-evenly;
         gap:50px;
         flex-wrap: wrap;
-        /* width: 80vw; */
         margin: auto;
 
         opacity: 0;
