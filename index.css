@@ -83,20 +83,20 @@ p {
     letter-spacing: 4px;
     text-align: center;
     font-weight: 500;
-    opacity: 0;
-    animation-name: view;
+    /* opacity: 0; */
+    /* animation-name: view; */
     animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-delay: 1.5s;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .landingImg p {
-    background-color: rgba(255, 255, 255, 0.728);
-    color: black;
-    padding: .2em 0em;
+    background-color: rgba(0, 0, 0, 0.657);
+    color: white;
+    padding: .2em 1em;
     font-size: 25px;
     text-align: center;
-    border-radius: 25px;
     font-weight: 500;
     opacity: 0;
     animation-name: view;
@@ -115,6 +115,7 @@ p {
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+
 }
 
 @keyframes arrow {
@@ -126,24 +127,6 @@ p {
 @keyframes view {
     from {opacity: 0;}
     to {opacity: 1;}
-}
-@media(max-width:645px){
-    .landingImg h1 {
-        font-size: 80px;
-    }
-    
-    .landingImg p {
-        font-size: 20px;
-    }
-}
-@media(max-width:400px){
-    .landingImg h1 {
-        font-size: 60px;
-    }
-    
-    .landingImg p {
-        font-size: initial;
-    }
 }
 
 
